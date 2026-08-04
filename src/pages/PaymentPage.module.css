@@ -1,0 +1,16 @@
+.paymentPage {
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  color: white;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+.paymentPage select {
+  background-color: transparent;
+  color: white;
+}
+
+.paymentPage select option {
+  background: #1a1a2e;
+  color: white;
+} 

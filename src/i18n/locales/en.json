@@ -1,0 +1,331 @@
+{
+  "common": {
+    "appName": "SMEED",
+    "tagline": "Student Management Everything Easily Digitally",
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "phoneNumber": "Phone Number",
+    "nationalId": "National ID",
+    "birthDate": "Birth Date",
+    "forgotPassword": "Forgot Password?",
+    "rememberMe": "Remember Me",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "update": "Update",
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "welcome": "Welcome",
+    "username": "Username",
+    "unknown": "Unknown",
+    "direction": "Direction",
+    "timeZone": "Time Zone",
+    "method": "Method",
+    "next": "Next",
+    "back": "Back",
+    "close": "Close",
+    "signIn": "Sign In",
+    "createAccount": "Create Account",
+    "saveChanges": "Save Changes",
+    "enterCity": "Enter your city",
+    "cityName": "City Name",
+    "updateLocation": "Update Location",
+    "locationDescription": "Enter your city to get accurate prayer times",
+    "changingLanguage": "Changing language..."
+  },
+  "nav": {
+    "home": "Home",
+    "dashboard": "Dashboard",
+    "academic": "Academic",
+    "health": "Health",
+    "finance": "Finance",
+    "worship": "Worship",
+    "appointments": "Appointments",
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+  "auth": {
+    "loginTo": "Login to",
+    "loginDescription": "Access all student tools in one place. Sign in to manage your academics, health, finance, and more.",
+    "registerTitle": "Create Account",
+    "registerDescription": "Join SMEED and Start your fully student life with all the tools you need in one place.",
+    "loginLocked": "Account locked. Please try again in {{time}}",
+    "loginFailed": "Invalid username or password",
+    "remainingAttempts": "{{count}} attempts remaining",
+    "verificationSent": "Verification email sent",
+    "resetSent": "Password reset email sent",
+    "verifyOTP": "Verify OTP",
+    "enterOTPCode": "Enter the 6-digit code we sent to your email to reset your password.",
+    "timeRemaining": "Time Remaining",
+    "resendOTP": "Resend OTP",
+    "verifying": "Verifying...",
+    "timeExpired": "Time Expired - Resend OTP",
+    "verify": "Verify",
+    "backToLogin": "Back to Login",
+    "enterUsername": "Enter your username",
+    "enterPassword": "Enter your password",
+    "loggingIn": "Logging in...",
+    "noAccount": "Don't have an account?",
+    "accountLocked": "Account is locked. Please try again in {{time}}",
+    "unlocked": "Account unlocked. You have 5 attempts remaining",
+    "resetPassword": "Reset Password",
+    "resetPasswordDescription": "Enter your new password to secure your account.",
+    "newPassword": "New Password",
+    "confirmNewPassword": "Confirm New Password",
+    "passwordChanged": "Password changed successfully! Please login with your new password.",
+    "verifyEmail": "Verify Email",
+    "verifyEmailDescription": "A verification link has been sent to your email",
+    "emailVerified": "Email verified successfully",
+    "enterAllDigits": "Please enter all 6 digits",
+    "invalidOTP": "Invalid OTP. Please try again.",
+    "failedToVerify": "Failed to verify OTP. Please try again.",
+    "failedToResend": "Failed to resend OTP. Please try again.",
+    "failedToResendOTP": "Failed to resend OTP. Please try again.",
+    "forgotPasswordTitle": "Forgot Password?",
+    "forgotPasswordDescription": "Enter your email address and we'll send you a one-time password to reset your account.",
+    "enterEmailAddress": "Please enter your email address",
+    "enterValidEmail": "Please enter a valid email address",
+    "failedToSendOTP": "Failed to send OTP. Please try again.",
+    "otpSentSuccess": "OTP sent successfully! Please check your email.",
+    "sendingOTP": "Sending OTP...",
+    "sendOTP": "Send OTP",
+    "createAccountOn": "Create Account on",
+    "fillAllFields": "Please fill in all fields",
+    "userNameValidation": "Username must be at least 3 characters and contain only letters and numbers",
+    "nationalIdValidation": "National ID must be 14 digits and start with 2 or 3",
+    "phoneNumberValidation": "Phone number must start with 010, 011, 012, or 015 and be 11 digits",
+    "birthdateValidation": "Birth date must be in the past and you must be at least 16 years old",
+    "passwordsNotMatch": "Passwords do not match",
+    "passwordValidation": "Password must be at least 8 characters with uppercase, lowercase, and number",
+    "userNameHelperText": "At least 3 characters, letters and numbers only",
+    "nationalIdHelperText": "Exactly 14 digits, starting with 2 or 3",
+    "phoneNumberHelperText": "Must start with 010, 011, 012, or 015 and be 11 digits",
+    "passwordHelperText": "At least 8 characters with uppercase, lowercase, and number",
+    "termsAndConditions": "I agree to the",
+    "termsOfService": "Terms of Service",
+    "and": "and",
+    "privacyPolicy": "Privacy Policy",
+    "alreadyHaveAccount": "Already have an account?",
+    "logIn": "Log In",
+    "resetPasswordTitle": "Reset Password",
+    "resetPasswordDescription": "Enter your new password to secure your account.",
+    "missingInformation": "Missing required information: {{fields}}. Please restart the password reset process.",
+    "processing": "Processing...",
+    "failedToReset": "Failed to reset password. Please try again.",
+    "unexpectedError": "An unexpected error occurred. Please try again."
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "overview": "Overview",
+    "recentActivity": "Recent Activity",
+    "upcomingEvents": "Upcoming Events",
+    "statistics": "Statistics",
+    "tasks": "Tasks",
+    "notifications": "Notifications",
+    "personalInfo": "Personal Information",
+    "profilePhoto": "Profile Photo",
+    "deletePhoto": "Delete photo",
+    "uploadPhoto": "Upload photo",
+    "academicInfo": "Academic Information",
+    "healthInfo": "Health Information",
+    "financeInfo": "Finance Information",
+    "stats": {
+      "title": "Your Statistics",
+      "courses": "Active Courses",
+      "assignments": "Pending Assignments",
+      "attendance": "Attendance Rate",
+      "gpa": "Current GPA"
+    },
+    "quickActions": {
+      "title": "Quick Actions",
+      "viewCourses": "View Courses",
+      "submitAssignment": "Submit Assignment",
+      "scheduleAppointment": "Schedule Appointment",
+      "trackPrayer": "Track Prayer"
+    },
+    "recentActivity": {
+      "title": "Recent Activity",
+      "viewAll": "View All",
+      "noActivity": "No recent activity"
+    },
+    "upcomingDeadlines": {
+      "title": "Upcoming Deadlines",
+      "viewAll": "View All",
+      "noDeadlines": "No upcoming deadlines"
+    }
+  },
+  "worship": {
+    "title": "Worship Tracker",
+    "description": "Track your daily prayers, set reminders, and stay connected with your spiritual journey",
+    "signInRequired": "Please Sign In",
+    "signInDescription": "To access the Worship Tracker and start monitoring your prayers, please sign in to your account.",
+    "prayerTimes": "Prayer Times",
+    "quranProgress": "Quran Progress",
+    "fasting": "Fasting",
+    "dhikr": "Dhikr",
+    "prayerTracking": "Prayer Tracking",
+    "prayerTrackingDesc": "Track your daily prayers and maintain consistency",
+    "progressReports": "Progress Reports",
+    "progressReportsDesc": "Monitor your spiritual journey with detailed insights",
+    "prayerTimesFeature": "Prayer Times",
+    "prayerTimesDesc": "Get accurate prayer times based on your location",
+    "prayers": {
+      "fajr": "Fajr",
+      "dhuhr": "Dhuhr",
+      "asr": "Asr",
+      "maghrib": "Maghrib",
+      "isha": "Isha"
+    },
+    "prayerDirection": "Prayer Direction",
+    "qiblaDirection": "Qibla Direction: {{direction}}",
+    "eastDirection": "→ East (Facing Jerusalem)",
+    "localTimeZone": "Local Time Zone",
+    "prayerMethod": "Prayer Method",
+    "standardMethod": "Standard Method",
+    "egyptianMethod": "Egyptian General Authority",
+    "christianPrayers": {
+      "baker": "Baker",
+      "elthaletha": "Elthaletha",
+      "elsadesa": "Elsadesa",
+      "eltas3a": "Eltas3a",
+      "el3rob": "El3rob",
+      "elnom": "Elnom",
+      "midnight": "Midnight",
+      "holyLiturgy": "Holy Liturgy"
+    },
+    "completedToday": "Completed Today",
+    "remaining": "Remaining",
+    "completionRate": "Completion Rate",
+    "dailyPrayers": "Daily Prayers",
+    "selectDate": "Select Date",
+    "report": "Report",
+    "downloadActivity": "Download activity log",
+    "noSpecificTimes": "No Specific Prayer Times",
+    "noSpecificTimesDesc": "You don't have any specific prayer times set. Feel free to use this space for your personal spiritual practices and reflections.",
+    "updatePreferences": "Update Preferences",
+    "welcomeTitle": "Welcome to Worship Tracker",
+    "welcomeDescription": "Track your daily prayers, set reminders, and stay connected with your spiritual journey",
+    "signInTitle": "Please Sign In",
+    "signInTitleDescription": "To access the Worship Tracker and start monitoring your prayers, please sign in to your account.",
+    "dashboard": {
+      "title": "Worship Dashboard",
+      "subtitle": "Track and manage your spiritual activities",
+      "todaysPrayers": "Today's Prayers",
+      "prayerStreak": "Prayer Streak",
+      "completedPrayers": "Completed Prayers",
+      "missedPrayers": "Missed Prayers"
+    },
+    "prayerTracker": {
+      "title": "Prayer Tracker",
+      "markComplete": "Mark as Complete",
+      "markMissed": "Mark as Missed",
+      "addNote": "Add Note",
+      "viewHistory": "View History"
+    },
+    "settings": {
+      "title": "Worship Settings",
+      "notifications": "Prayer Notifications",
+      "location": "Prayer Location",
+      "method": "Calculation Method",
+      "adjustments": "Time Adjustments"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email",
+    "password": "Password must be at least 8 characters with numbers and letters",
+    "passwordMatch": "Passwords do not match",
+    "phone": "Please enter a valid phone number",
+    "nationalId": "Please enter a valid national ID",
+    "date": "Please enter a valid date",
+    "username": "Username must be at least 3 characters"
+  },
+  "home": {
+    "secureAuthTitle": "Secure Auth",
+    "secureAuthDescription": "AES-256 encryption, email verification, and account protection mechanisms.",
+    "testimonialsSectionTitle": "What Users Are Saying?",
+    "testimonialsSectionDescription": "Join thousands of students who have transformed their academic journey with SMEED.",
+    "hero": {
+      "title": "Manage Your Student Life Digitally",
+      "subtitle": "All-in-one platform for students to manage their academic, health, financial, and spiritual life",
+      "getStarted": "Get Started",
+      "learnMore": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose SMEED?",
+      "subtitle": "Comprehensive tools designed specifically for students",
+      "academic": {
+        "title": "Academic Management",
+        "description": "Track your courses, assignments, and grades all in one place"
+      },
+      "health": {
+        "title": "Health Tracking",
+        "description": "Monitor your health metrics and medical appointments"
+      },
+      "finance": {
+        "title": "Financial Planning",
+        "description": "Manage your expenses, scholarships, and student loans"
+      },
+      "worship": {
+        "title": "Spiritual Wellness",
+        "description": "Keep track of your prayers and spiritual activities"
+      }
+    },
+    "testimonials": {
+      "title": "What Students Say",
+      "subtitle": "Real experiences from our users",
+      "items": [
+        {
+          "name": "Dr. Yaser",
+          "role": "Medical Student",
+          "text": "SMEED has transformed how I manage my studies and rotations"
+        },
+        {
+          "name": "Remon",
+          "role": "Engineering Student",
+          "text": "The prayer tracking feature helps me stay consistent with my spiritual practices"
+        },
+        {
+          "name": "Mina",
+          "role": "Business Student",
+          "text": "The financial planning tools are exactly what I needed"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Start?",
+      "subtitle": "Join thousands of students already using SMEED",
+      "button": "Create Free Account"
+    }
+  },
+  "profile": {
+    "title": "Profile Settings",
+    "personalInfo": {
+      "title": "Personal Information",
+      "edit": "Edit Information",
+      "save": "Save Changes",
+      "cancel": "Cancel"
+    },
+    "preferences": {
+      "title": "Preferences",
+      "language": "Language",
+      "theme": "Theme",
+      "notifications": "Notifications"
+    },
+    "security": {
+      "title": "Security",
+      "changePassword": "Change Password",
+      "twoFactor": "Two-Factor Authentication",
+      "sessions": "Active Sessions"
+    }
+  }
+}

@@ -1,0 +1,206 @@
+.backButton {
+  background-color: white;
+  text-align: center;
+  width: 8rem;
+  border-radius: 0.75rem;
+  height: 2.5rem;
+  position: relative;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-right: 1rem;
+}
+
+.backButtonSlider {
+  background-color: rgb(74 222 128);
+  border-radius: 0.5rem;
+  height: 2rem;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  z-index: 10;
+  transition-duration: 500ms;
+}
+
+.backButton:hover .backButtonSlider {
+  width: 7.5rem;
+}
+
+.backButtonText {
+  transform: translateX(0.5rem);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+.pageContent {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pay button styles */
+.payButton {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  width: 100%;
+  justify-content: center;
+}
+
+.payButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.iconContainer {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  color: #22c55e;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.defaultIcon {
+  opacity: 1;
+  visibility: visible;
+}
+
+.payButton:hover .icon {
+  animation: none;
+}
+
+.payButton:hover .defaultIcon {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.payButton:hover .cardIcon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 0s;
+}
+
+.payButton:hover .paymentIcon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 0.5s;
+}
+
+.payButton:hover .dollarIcon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 1s;
+}
+
+.payButton:hover .checkIcon {
+  animation: iconRotate 2.5s infinite;
+  animation-delay: 1.5s;
+}
+
+.payButton:active .icon {
+  animation: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.payButton:active .checkIcon {
+  animation: checkmarkAppear 0.6s ease forwards;
+  visibility: visible;
+}
+
+.buttonText {
+  font-weight: 600;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+@keyframes iconRotate {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px) scale(0.5);
+  }
+  5% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  15% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+  20% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px) scale(0.5);
+  }
+}
+
+@keyframes checkmarkAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-45deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(1.2) rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+} 

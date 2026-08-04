@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 bg-gray-50 dark:text-gray-100 dark:bg-gray-950 transition-colors duration-300;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative px-1 py-2 text-gray-700 dark:text-gray-300 font-medium hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200;
+  }
+  
+  .nav-link::after {
+    content: '';
+    @apply absolute left-0 bottom-0 h-0.5 w-0 bg-blue-500 dark:bg-blue-400 transition-all duration-300 ease-in-out;
+  }
+  
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  .mobile-nav-link {
+    @apply flex items-center space-x-3 px-4 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors;
+  }
+  
+  .profile-dropdown-link {
+    @apply flex items-center space-x-2 px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors;
+  }
+  
+  .shimmer-hover {
+    @apply relative overflow-hidden;
+  }
+  
+  .shimmer-hover::after {
+    content: '';
+    @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000;
+  }
+  
+  .shimmer-hover:hover::after {
+    @apply translate-x-full opacity-100;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300;
+  }
+  
+  .card-hover {
+    @apply transform transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl;
+  }
+  
+  .glow-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-hover:hover {
+    @apply shadow-glow-md;
+  }
+  
+  .rainbow-glow-hover:hover {
+    @apply shadow-rainbow-md;
+  }
+  
+  .floating-shape {
+    @apply absolute pointer-events-none opacity-70 animate-float;
+  }
+
+  /* Worship Page Specific Styles */
+  .prayer-card {
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border-2 transition-all duration-300;
+  }
+
+  .prayer-card.completed {
+    @apply border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20;
+  }
+
+  .prayer-card:hover {
+    @apply shadow-lg transform -translate-y-1;
+  }
+
+  .prayer-time-indicator {
+    @apply absolute top-2 right-2 w-3 h-3 rounded-full;
+  }
+
+  .prayer-time-indicator.current {
+    @apply bg-blue-500 animate-pulse;
+  }
+
+  .prayer-time-indicator.passed {
+    @apply bg-gray-400 dark:bg-gray-600;
+  }
+
+  .prayer-time-indicator.upcoming {
+    @apply bg-yellow-500;
+  }
+
+  .preference-selection-card {
+    @apply p-6 border-2 rounded-xl cursor-pointer transition-all duration-300 hover:shadow-lg;
+  }
+
+  .preference-selection-card.selected {
+    @apply border-blue-500 bg-blue-50 dark:bg-blue-900/20 shadow-md;
+  }
+
+  .preference-selection-card:not(.selected) {
+    @apply border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600;
+  }
+
+  .worship-stats-card {
+    @apply bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 shadow-md;
+  }
+
+  .worship-completion-ring {
+    @apply relative inline-flex items-center justify-center;
+  }
+
+  .worship-completion-ring::before {
+    content: '';
+    @apply absolute inset-0 rounded-full border-4 border-gray-200 dark:border-gray-700;
+  }
+
+  .worship-completion-ring::after {
+    content: '';
+    @apply absolute inset-0 rounded-full border-4 border-transparent border-t-blue-500 animate-spin;
+  }
+
+  /* Islamic Pattern Decorations */
+  .islamic-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(34, 197, 94, 0.1) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+
+  .christian-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.1) 1px, transparent 0);
+    background-size: 15px 15px;}
+
+}
+
+.gradient-flow {
+  background: linear-gradient(
+    45deg,
+    #2563eb, /* blue-600 */
+    #7c3aed, /* purple-700 */
+    #2563eb,
+    #7c3aed
+  );
+  background-size: 200%;
+  animation: gradientFlow 5s linear infinite;
+}
+
+
+
+.dark .gradient-flow {
+  background: linear-gradient(
+    45deg,
+    #3b82f6, /* blue-500 */
+    #9333ea, /* purple-600 */
+    #3b82f6,
+    #9333ea
+  );
+  background-size: 200%;
+  animation: gradientFlow 5s linear infinite;
+}
+.floating-shape {
+  position: absolute;
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+.with-hover:hover {
+  transform: translateY(-2px);
+  transition: transform 0.3s ease;
+}
+
+.with-glow {
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.with-glow:hover {
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.5);
+}
+
+.dark .with-glow {
+  box-shadow: 0 4px 15px rgba(96, 165, 250, 0.3);
+}
+
+.dark .with-glow:hover {
+  box-shadow: 0 6px 20px rgba(96, 165, 250, 0.5);
+}
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Global Animations */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.rainbow-gradient {
+  background: linear-gradient(
+    90deg,
+    #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff
+  );
+  background-size: 200% 200%;
+  animation: rainbowGradient 5s ease infinite;
+}
+
+@keyframes rainbowGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.rainbow-loading-ring {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #ff0000;
+  border-right-color: #00ff00;
+  border-bottom-color: #0000ff;
+  border-left-color: #ff00ff;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Particle canvas */
+#particles-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* Appointment Page Specific Styles */
+.appointment-card {
+  @apply bg-white dark:bg-gray-800 rounded-xl shadow-md border transition-all duration-300 ease-in-out;
+}
+
+.appointment-card:hover {
+  @apply shadow-lg transform -translate-y-1 scale-[1.02];
+}
+
+.appointment-card.completed {
+  @apply border-green-200 dark:border-green-800 bg-green-50 dark:bg-green-900/20;
+}
+
+.appointment-card.overdue {
+  @apply border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20;
+}
+
+.kanban-column {
+  @apply min-h-[500px] p-4 bg-gray-50 dark:bg-gray-900/50 rounded-lg border border-gray-200 dark:border-gray-700;
+}
+
+.kanban-column:hover {
+  @apply bg-gray-100 dark:bg-gray-900/70 transition-colors duration-200;
+}
+
+.stats-card {
+  @apply bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300;
+}
+
+.appointment-type-badge {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.appointment-actions {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.appointment-card:hover .appointment-actions {
+  opacity: 1;
+}
+
+.task-complete-animation {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+.task-complete-animation.completed {
+  @apply opacity-75 transform scale-95;
+}
+
+.progress-bar {
+  @apply transition-all duration-1000 ease-out;
+}
+
+.appointment-modal {
+  @apply backdrop-blur-sm bg-black/60;
+}
+
+/* Calendar Styles */
+.appointment-calendar .react-calendar {
+  @apply w-full border-none bg-transparent font-sans;
+}
+
+.appointment-calendar .react-calendar__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.appointment-calendar .react-calendar__navigation button {
+  min-width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  color: rgb(75 85 99);
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appointment-calendar .react-calendar__navigation button:enabled:hover,
+.appointment-calendar .react-calendar__navigation button:enabled:focus {
+  background-color: rgb(243 244 246);
+  color: rgb(17 24 39);
+}
+
+.appointment-calendar .react-calendar__navigation button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.appointment-calendar .react-calendar_navigation_label {
+  flex-grow: 1;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: rgb(17 24 39);
+}
+
+.appointment-calendar .react-calendar_month-view_weekdays {
+  background-color: rgb(249 250 251);
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.appointment-calendar .react-calendar_month-viewweekdays_weekday {
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(75 85 99);
+  border: none;
+}
+
+.appointment-calendar .react-calendar_month-viewweekdays_weekday abbr {
+  text-decoration: none;
+}
+
+.appointment-calendar .react-calendar_month-view_days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.25rem;
+}
+
+.appointment-calendar .react-calendar__tile {
+  position: relative;
+  padding: 0.5rem;
+  height: 3rem;
+  background-color: white;
+  border: 1px solid rgb(229 231 235);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgb(17 24 39);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.appointment-calendar .react-calendar__tile:enabled:hover,
+.appointment-calendar .react-calendar__tile:enabled:focus {
+  background-color: rgb(239 246 255);
+  border-color: rgb(147 197 253);
+  color: rgb(30 64 175);
+}
+
+.appointment-calendar .react-calendar__tile--active {
+  background-color: rgb(59 130 246);
+  border-color: rgb(59 130 246);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.appointment-calendar .react-calendar__tile--active:enabled:hover,
+.appointment-calendar .react-calendar__tile--active:enabled:focus {
+  background-color: rgb(37 99 235);
+  border-color: rgb(37 99 235);
+}
+
+.appointment-calendar .react-calendar__tile--now {
+  background-color: rgb(219 234 254);
+  border-color: rgb(147 197 253);
+  color: rgb(30 64 175);
+}
+
+.appointment-calendar .react-calendar__tile--now:enabled:hover,
+.appointment-calendar .react-calendar__tile--now:enabled:focus {
+  background-color: rgb(191 219 254);
+  border-color: rgb(96 165 250);
+}
+
+.appointment-calendar .react-calendar__tile--neighboringMonth {
+  color: rgb(156 163 175);
+  background-color: rgb(249 250 251);
+}
+
+.appointment-calendar .calendar-day-indicators {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.appointment-calendar .react-calendar__tile.has-appointments {
+  border-color: rgb(147 197 253);
+}
+
+.appointment-calendar .react-calendar__tile.has-overdue {
+  border-color: rgb(252 165 165);
+  background-color: rgb(254 242 242);
+}
+
+.appointment-calendar .react-calendar__tile.all-completed {
+  border-color: rgb(134 239 172);
+  background-color: rgb(240 253 244);
+}
+
+/* Loading animations */
+.loading-spinner {
+  @apply animate-spin w-5 h-5 border-2 border-current border-t-transparent rounded-full;
+}
+
+/* PDF generation button states */
+.pdf-generating {
+  @apply opacity-75 cursor-not-allowed;
+}
+
+/* Responsive calendar adjustments */
+@media (max-width: 768px) {
+  .appointment-calendar .react-calendar__tile {
+    height: 2.5rem;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+  }
+  
+  .appointment-calendar .calendar-day-indicators .flex {
+    gap: 0.125rem;
+  }
+  
+  .appointment-calendar .calendar-day-indicators .w-1\.5 {
+    width: 0.25rem;
+    height: 0.25rem;
+  }
+}
+
+/* Dark mode styles for calendar */
+@media (prefers-color-scheme: dark) {
+  .appointment-calendar .react-calendar__navigation button {
+    color: rgb(156 163 175);
+  }
+
+  .appointment-calendar .react-calendar__navigation button:enabled:hover,
+  .appointment-calendar .react-calendar__navigation button:enabled:focus {
+    background-color: rgb(55 65 81);
+    color: white;
+  }
+
+  .appointment-calendar .react-calendar_navigation_label {
+    color: white;
+  }
+
+  .appointment-calendar .react-calendar_month-view_weekdays {
+    background-color: rgb(31 41 55);
+  }
+
+  .appointment-calendar .react-calendar_month-viewweekdays_weekday {
+    color: rgb(156 163 175);
+  }
+
+  .appointment-calendar .react-calendar__tile {
+    background-color: rgb(31 41 55);
+    border-color: rgb(55 65 81);
+    color: white;
+  }
+
+  .appointment-calendar .react-calendar__tile:enabled:hover,
+  .appointment-calendar .react-calendar__tile:enabled:focus {
+    background-color: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.8);
+    color: rgb(147 197 253);
+  }
+
+  .appointment-calendar .react-calendar__tile--now {
+    background-color: rgba(59, 130, 246, 0.3);
+    border-color: rgb(59 130 246);
+    color: rgb(147 197 253);
+  }
+
+  .appointment-calendar .react-calendar__tile--neighboringMonth {
+    color: rgb(75 85 99);
+    background-color: rgb(17 24 39);
+  }
+
+  .appointment-calendar .react-calendar__tile.has-overdue {
+    border-color: rgb(239 68 68);
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+
+  .appointment-calendar .react-calendar__tile.all-completed {
+    border-color: rgb(34 197 94);
+    background-color: rgba(34, 197, 94, 0.2);
+  }
+}
+
+/* Calendar utility classes */
+.calendar-summary-card {
+  @apply bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-4 shadow-sm;
+}
+
+.calendar-selected-date {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm;
+}
+
+.appointment-type-badge-calendar {
+  @apply inline-flex items-center px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.calendar-today-button {
+  @apply px-3 py-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/40 transition-colors;
+}
+
+.progress-bar-enhanced {
+  @apply relative overflow-hidden rounded-full;
+}
+
+.progress-bar-enhanced::after {
+  content: '';
+  @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full transition-transform duration-1000;
+}
+
+.progress-bar-enhanced:hover::after {
+  @apply translate-x-full;
+}
